@@ -1,0 +1,23 @@
+{
+  "name": "webpack-4-tutorial",
+  "version": "1.0.0",
+  "description": "webpack 4 quick start",
+  "author": "soraflat",
+  "scripts": {
+    "dev": "webpack --mode development --watch",
+    "build": "webpack --mode production"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "eslint": "^4.18.2",
+    "eslint-loader": "^1.9.0",
+    "webpack": "^4.1.1",
+    "webpack-cli": "^2.0.11"
+  },
+  "dependencies": {
+    "jquery": "^3.2.1"
+  },
+  "license": "MIT"
+}
