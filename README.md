@@ -1,4 +1,7 @@
 # webpack-4-tutorial
+解説記事はこちらをご覧ください。
+
+[webpack 4 入門 ](https://qiita.com/soarflat/items/28bf799f7e0335b68186)
 
 ### インストール
 ```
