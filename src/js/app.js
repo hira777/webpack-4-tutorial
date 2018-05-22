@@ -8,7 +8,7 @@ const totalPrice = additionCalculator(item1Price, item2Price);
 const tax = 1.08;
 const priceIncludeTax = taxCalculator(totalPrice, tax);
 
-// eslint-loaderでエラーが出て
-// productionモードでビルドできないためコメントアウト
+// eslint-loaderの設定次第では、consoleが残ったままだとビルドできないため注意
 // console.log(priceIncludeTax);
+
 $('body').html(priceIncludeTax);
