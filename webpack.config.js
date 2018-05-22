@@ -8,7 +8,10 @@ const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const path = require('path');
 
 module.exports = (env, argv) => {
-  // developmentモードかどうか
+  // argv.modeにはwebpackを実行したmodeが格納されている
+  // 例えば webpack --mode development と実行すれば
+  // argv.mode には 'development' が格納されている
+  // そのためdevelopmentモードで実行したかどうかを判定できる
   const IS_DEVELOPMENT = argv.mode === 'development';
 
   return {
