@@ -1,9 +1,13 @@
 # webpack-4-tutorial
-解説記事はこちらをご覧ください。
+
+A simple example of webpack 4 using loader, plugin, optimization.
+
+To learn more about webpack4, take a look at the following post I posted (Japanese only).
 
 [webpack 4 入門 ](https://qiita.com/soarflat/items/28bf799f7e0335b68186)
 
-### インストール
+## Installation
+
 ```
 npm install
 ```
@@ -11,12 +15,12 @@ npm install
 or
 
 ```
-yarn install
+yarn
 ```
 
-### 使い方
+## Usage
 
-#### `webpack --mode development --watch`を実行したい場合
+### Building bundle with webpack (development mode).
 
 ```
 npm run dev
@@ -25,10 +29,16 @@ npm run dev
 or
 
 ```
-yarn run dev
+yarn dev
 ```
 
-#### `webpack --mode production`を実行したい場合
+or
+
+```
+npx webpack --mode development --watch
+```
+
+### Building bundle with webpack (production mode).
 
 ```
 npm run build
@@ -37,8 +47,15 @@ npm run build
 or
 
 ```
-yarn run build
+yarn build
 ```
 
-### License
+or
+
+```
+npx webpack --mode production
+```
+
+## License
+
 [MIT](http://opensource.org/licenses/MIT)
