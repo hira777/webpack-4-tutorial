@@ -2,7 +2,7 @@
 const webpack = require('webpack');
 
 // optimization.minimizerを上書きするために必要なプラグイン
-const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 
 // output.pathに絶対パスを指定する必要があるため、pathモジュールを読み込んでおく
 const path = require('path');
@@ -21,7 +21,7 @@ module.exports = (env, argv) => {
     output: {
       // 出力するファイル名
       filename: 'bundle.js',
-      // 出力先のパス（v2系以降は絶対パスを指定する必要がある）
+      // 出力先のパス（絶対パスを指定する必要がある）
       path: path.join(__dirname, 'public/js')
     },
     // ローダーの設定
@@ -70,15 +70,13 @@ module.exports = (env, argv) => {
       // developmentモードでビルドした場合
       // minimizer: [] となるため、consoleは残されたファイルが出力される
       // puroductionモードでビルドした場合
-      // minimizer: [ new UglifyJSPlugin({... となるため、consoleは削除したファイルが出力される
+      // minimizer: [ new TerserPlugin({... となるため、consoleを削除したファイルが出力される
       minimizer: IS_DEVELOPMENT
         ? []
         : [
-            new UglifyJSPlugin({
-              uglifyOptions: {
-                compress: {
-                  drop_console: true
-                }
+            new TerserPlugin({
+              terserOptions: {
+                compress: { drop_console: true }
               }
             })
           ]
