@@ -40,7 +40,7 @@ module.exports = (env, argv) => {
               // 今回はbabel-loaderを利用しているため
               // babelのオプションを指定しているという認識で問題ない
               options: {
-                presets: [['env', { modules: false }]]
+                presets: [['@babel/preset-env', { modules: false }]]
               }
             }
           ]
